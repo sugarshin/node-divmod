@@ -1,6 +1,6 @@
 # node-divmod
 
-[![Build Status](https://travis-ci.org/sugarshin/node-divmod.svg?branch=master)](https://travis-ci.org/sugarshin/node-divmod) [![Coverage Status](https://coveralls.io/repos/sugarshin/node-divmod/badge.svg)](https://coveralls.io/r/sugarshin/node-divmod) [![GitHub version](https://badge.fury.io/gh/sugarshin%2Fnode-divmod.svg)](http://badge.fury.io/gh/sugarshin%2Fnode-divmod) [![License](http://img.shields.io/:license-mit-blue.svg)](http://sugarshin.mit-license.org/)
+[![Build Status](https://travis-ci.org/sugarshin/node-divmod.svg?branch=master)](https://travis-ci.org/sugarshin/node-divmod) [![GitHub version](https://badge.fury.io/gh/sugarshin%2Fnode-divmod.svg)](http://badge.fury.io/gh/sugarshin%2Fnode-divmod) [![License](http://img.shields.io/:license-mit-blue.svg)](http://sugarshin.mit-license.org/)
 
 node-divmod
 
