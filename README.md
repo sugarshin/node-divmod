@@ -16,12 +16,6 @@ var divmod = require('divmod');
 
 or
 
-```js
-import divmod from 'divmod';
-```
-
-or
-
 ```html
 <script src="build/node-divmod.js"></script>
 ```
