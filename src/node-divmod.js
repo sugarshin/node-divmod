@@ -6,7 +6,7 @@
 
 "use strict";
 
-export default (value, lambda) => {
+export default function divmod(value, lambda) {
   if (typeof value !== 'number' || typeof lambda !== 'number') {
     throw new Error('Specify the type number.');
   }
@@ -15,4 +15,4 @@ export default (value, lambda) => {
   }
 
   return [Math.floor(value / lambda), value % lambda];
-};
+}

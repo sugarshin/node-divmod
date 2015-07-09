@@ -1,5 +1,5 @@
 import assert from 'power-assert';
-import divmod from '../src/node-divmod';
+import divmod from '../';
 
 describe('node-divmod', () => {
   var q = 212, r = 4;

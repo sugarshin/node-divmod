@@ -1,8 +1,11 @@
 {
   "name": "divmod",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "node-divmod",
-  "repository": "git@github.com:sugarshin/node-divmod.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:sugarshin/node-divmod.git"
+  },
   "main": "index.js",
   "files": [
     "lib",
@@ -12,27 +15,28 @@
     "README.md"
   ],
   "scripts": {
-    "start": "babel src/node-divmod.js -w -o lib/node-divmod.js",
-    "test": "mochify -R spec --transform babelify --transform espowerify ./test/test.js",
-    "compile": "babel src/node-divmod.js -o lib/node-divmod.js",
-    "build-standalone": "browserify src/node-divmod.js -t babelify -s divmod | derequire > build/node-divmod.js",
-    "build-min": "uglifyjs build/node-divmod.js -m -c warnings=false --comments '/\\/*!/' -o build/node-divmod.min.js",
-    "build": "npm run compile && npm run build-standalone && npm run build-min"
+    "lint": "eslint src/",
+    "test": "mocha --compilers js:espower-babel/guess test/**/*.js",
+    "compile": "babel -d lib/ src/",
+    "standalone": "browserify src/node-divmod.js -t babelify -s divmod | derequire > build/node-divmod.js",
+    "minify": "uglifyjs build/node-divmod.js -m -c warnings=false --comments '/\\/*!/' -o build/node-divmod.min.js",
+    "build": "npm run lint && npm run compile && npm run standalone && npm run minify"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.x"
   },
   "author": "sugarshin",
   "license": "MIT",
   "devDependencies": {
-    "babel": "^4.7.16",
-    "babelify": "^5.0.4",
-    "browserify": "^9.0.3",
+    "babel": "^5.6.14",
+    "babel-eslint": "^3.1.23",
+    "babelify": "^6.1.2",
+    "browserify": "^10.2.4",
     "derequire": "^2.0.0",
-    "espowerify": "^0.10.0",
-    "mochify": "^2.6.1",
-    "phantomjs": "^1.9.16",
-    "power-assert": "^0.10.2",
-    "uglify-js": "^2.4.17"
+    "eslint": "^0.24.0",
+    "espower-babel": "^3.2.0",
+    "mocha": "^2.2.5",
+    "power-assert": "^0.11.0",
+    "uglify-js": "^2.4.23"
   }
 }
